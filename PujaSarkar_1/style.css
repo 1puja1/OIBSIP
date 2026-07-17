@@ -235,3 +235,165 @@ img {
     border-bottom: 1px solid var(--coral);
     padding-bottom: 1px;
 }
+
+/* ---------- ADVANTAGE GRID ---------- */
+.advantages {
+    text-align: center;
+    padding: 20px 0 90px;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 10px;
+}
+
+.advantage-icon {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.advantage-icon.lock {
+    background: var(--lime);
+}
+
+.advantage-icon.globe {
+    background: var(--teal-deep);
+    color: var(--lime);
+}
+
+.advantage-icon.speed {
+    background: var(--coral);
+}
+
+.advantage-grid h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.advantage-grid p {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.more-link {
+    display: inline-block;
+    margin-top: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--coral);
+    border-bottom: 1px solid var(--coral);
+}
+
+/* ---------- STATS / MAP ---------- */
+.stats {
+    background: var(--blush);
+    padding: 90px 0 70px;
+    text-align: center;
+}
+
+.stats h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.map-wrap img {
+    width: 100%;
+    filter: grayscale(1) contrast(1.1);
+    opacity: .75;
+    mix-blend-mode: multiply;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.numbers .num {
+    font-family: 'Fraunces', serif;
+    font-size: 44px;
+    color: var(--teal-deep);
+    line-height: 1;
+}
+
+.numbers .label {
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-top: 4px;
+}
+
+.stats-footer {
+    margin-top: 50px;
+}
+
+.stats-footer a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal-deep);
+    border-bottom: 1px solid var(--teal-deep);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: var(--teal-deep);
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+    padding: 36px 20px;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--lime);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 860px) {
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .feature-row,
+    .feature-row.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-row.reverse .feature-media,
+    .feature-row.reverse .feature-text,
+    .feature-row .feature-media,
+    .feature-row .feature-text {
+        order: initial;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo-wrap {
+        height: 280px;
+    }
+}
