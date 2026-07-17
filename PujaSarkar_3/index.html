@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Temperature Converter</h1>
+
+    <label for="tempInput">Enter temperature:</label>
+    <input type="text" id="tempInput" placeholder="e.g. 98.6">
+
+    <label for="unitSelect">From unit:</label>
+    <select id="unitSelect">
+      <option value="C">Celsius (°C)</option>
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+
+    <button id="convertBtn">Convert</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+<script>
+  const input = document.getElementById('tempInput');
+  const unitSelect = document.getElementById('unitSelect');
+  const result = document.getElementById('result');
+  const btn = document.getElementById('convertBtn');
+
+  btn.addEventListener('click', () => {
+    const value = input.value.trim();
+
+    // Validate input is a number
+    if (value === '' || isNaN(value)) {
+      result.textContent = 'Please enter a valid number.';
+      result.className = 'result error';
+      return;
+    }
+
+    const temp = parseFloat(value);
+    const unit = unitSelect.value;
+
+    // Convert everything to Celsius first
+    let celsius;
+    if (unit === 'C') celsius = temp;
+    if (unit === 'F') celsius = (temp - 32) * 5 / 9;
+    if (unit === 'K') celsius = temp - 273.15;
+
+    // Check for temps below absolute zero
+    if (celsius < -273.15) {
+      result.textContent = 'That temperature is below absolute zero!';
+      result.className = 'result error';
+      return;
+    }
+
+    // Convert from Celsius to the other two units
+    const fahrenheit = celsius * 9 / 5 + 32;
+    const kelvin = celsius + 273.15;
+
+    result.className = 'result';
+    result.innerHTML =
+      `${celsius.toFixed(2)} °C<br>` +
+      `${fahrenheit.toFixed(2)} °F<br>` +
+      `${kelvin.toFixed(2)} K`;
+  });
+</script>
+
+</body>
+</html>
