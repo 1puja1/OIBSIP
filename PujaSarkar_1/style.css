@@ -1,0 +1,237 @@
+:root {
+    --ink: #0F3B3A;
+    --cream: #F7F2E9;
+    --coral: #FF6A4D;
+    --lime: #C7DA3A;
+    --blush: #F7DFD8;
+    --teal-deep: #0B2E2D;
+    --white: #FFFFFF;
+    --muted: #5B6D6A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--teal-deep);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 32px 0;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--teal-deep);
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.lang {
+    font-size: 14px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+}
+
+.lang select {
+    color: var(--muted);
+    background-color: var(--cream);
+    border: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 64px 32px 0;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.08;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--teal-deep);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform .18s ease, background .18s ease;
+}
+
+.btn:hover {
+    background: var(--ink);
+    transform: translateY(-2px);
+}
+
+.guarantee {
+    margin-top: 14px;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.hero-photo-wrap {
+    position: relative;
+    margin-top: 40px;
+    height: 420px;
+    overflow: hidden;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.hero-photo-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(247, 242, 233, 0) 0%, rgba(247, 242, 233, 0.0) 55%, var(--white) 100%);
+}
+
+/* ---------- FEATURE ROWS ---------- */
+.features {
+    padding: 100px 0 60px;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.feature-row.reverse .feature-media {
+    order: 2;
+}
+
+.feature-row.reverse .feature-text {
+    order: 1;
+}
+
+.feature-media {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.feature-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-text h2 {
+    font-size: 34px;
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+
+.feature-text p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 400px;
+}
+
+.device-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.device-icons span {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.see-all {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--coral);
+    font-weight: 600;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--coral);
+    padding-bottom: 1px;
+}
