@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puja Sarkar — Web Developer &amp; Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== decorative background blobs ===== -->
+    <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#top" class="nav__logo">PS<span class="nav__logo-dot">.</span></a>
+            <nav class="nav__links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="btn btn--ghost nav__cta">Say Hello</a>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="hero__text reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span>B.Tech CSE, 3rd Year · University of Calcutta</p>
+            <h1 class="hero__title">
+                Hi, I'm <span class="hero__name">Puja Sarkar<svg class="hero__underline" viewBox="0 0 300 14"
+                        preserveAspectRatio="none">
+                        <path d="M2 10 C 60 2, 240 2, 298 8" />
+                    </svg></span>
+            </h1>
+            <h2 class="hero__subtitle">I build clean interfaces, and write the code behind them.</h2>
+            <p class="hero__desc">
+                Computer Science &amp; Engineering student who splits her time between a code editor and Figma.
+                I like turning half-formed ideas into web pages that actually feel good to use —
+                currently deep in React, UI/UX, and everything in between.
+            </p>
+            <div class="hero__actions">
+                <a href="#projects" class="btn btn--primary">View Projects</a>
+                <a href="#contact" class="btn btn--outline">Get in touch</a>
+            </div>
+            <div class="hero__stats">
+                <div class="stat">
+                    <span class="stat__num">3<sup>rd</sup></span>
+                    <span class="stat__label">Year, CSE</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">10+</span>
+                    <span class="stat__label">Projects built</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">5+</span>
+                    <span class="stat__label">Tools &amp; frameworks</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual reveal reveal--delay-1">
+            <!-- floating tech badges -->
+            <div class="badge badge--html" style="--float-delay:0s">HTML5</div>
+            <div class="badge badge--css" style="--float-delay:.7s">CSS3</div>
+            <div class="badge badge--js" style="--float-delay:1.4s">JS</div>
+            <div class="badge badge--react" style="--float-delay:2.1s">React</div>
+            <div class="badge badge--figma" style="--float-delay:2.8s">Figma</div>
+
+            <div class="editor">
+                <div class="editor__bar">
+                    <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+                    <span class="editor__tab">portfolio.js</span>
+                </div>
+                <pre class="editor__body"><code id="typedCode"></code><span class="cursor">&#9608;</span></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span>About</p>
+            <h2 class="section__title">A little about my journey.</h2>
+        </div>
+
+        <div class="about__grid">
+            <div class="about__art reveal">
+                <svg viewBox="0 0 360 320" class="illustration" role="img"
+                    aria-label="Illustration of a laptop with code, a coffee cup and a small plant">
+                    <!-- desk -->
+                    <rect x="20" y="250" width="320" height="14" rx="7" fill="var(--surface-light)" />
+                    <!-- plant -->
+                    <rect x="50" y="205" width="34" height="46" rx="6" fill="var(--accent-teal)" opacity="0.9" />
+                    <circle cx="67" cy="195" r="14" fill="var(--accent-teal)" />
+                    <circle cx="55" cy="188" r="11" fill="var(--accent-teal)" opacity="0.8" />
+                    <circle cx="80" cy="188" r="11" fill="var(--accent-teal)" opacity="0.8" />
+                    <!-- coffee cup -->
+                    <rect x="290" y="215" width="34" height="34" rx="6" fill="var(--accent-marigold)" />
+                    <path d="M324 222 h10 a10 10 0 0 1 0 20 h-10" fill="none" stroke="var(--accent-marigold)"
+                        stroke-width="5" />
+                    <path class="steam" d="M300 210 q5 -10 0 -18" fill="none" stroke="var(--text-muted)"
+                        stroke-width="3" stroke-linecap="round" />
+                    <path class="steam steam--2" d="M312 210 q5 -10 0 -18" fill="none" stroke="var(--text-muted)"
+                        stroke-width="3" stroke-linecap="round" />
+                    <!-- laptop base -->
+                    <path d="M110 250 L250 250 L262 262 L98 262 Z" fill="var(--surface-light)" />
+                    <!-- laptop screen -->
+                    <rect x="120" y="120" width="120" height="130" rx="8" fill="#0C1024" stroke="var(--border-strong)"
+                        stroke-width="2" />
+                    <rect x="132" y="134" width="96" height="102" rx="4" fill="var(--surface)" />
+                    <!-- code lines -->
+                    <rect x="140" y="146" width="46" height="6" rx="3" fill="var(--accent-marigold)" />
+                    <rect x="140" y="160" width="70" height="6" rx="3" fill="var(--text-muted)" />
+                    <rect x="150" y="174" width="58" height="6" rx="3" fill="var(--accent-teal)" />
+                    <rect x="150" y="188" width="40" height="6" rx="3" fill="var(--text-muted)" />
+                    <rect x="140" y="202" width="30" height="6" rx="3" fill="var(--accent-marigold)" />
+                    <rect x="140" y="216" width="64" height="6" rx="3" fill="var(--text-muted)" />
+                    <!-- browser/design floaty card -->
+                    <g class="float-card">
+                        <rect x="230" y="70" width="90" height="66" rx="10" fill="var(--surface)"
+                            stroke="var(--border-strong)" stroke-width="2" />
+                        <circle cx="244" cy="84" r="3" fill="#FF6B6B" />
+                        <circle cx="254" cy="84" r="3" fill="var(--accent-marigold)" />
+                        <circle cx="264" cy="84" r="3" fill="#5FD9A4" />
+                        <rect x="240" y="96" width="70" height="8" rx="3" fill="var(--accent-teal)" opacity="0.85" />
+                        <rect x="240" y="110" width="50" height="6" rx="3" fill="var(--text-muted)" />
+                        <rect x="240" y="122" width="60" height="6" rx="3" fill="var(--text-muted)" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="about__content">
+                <p class="reveal">
+                    I'm a Computer Science &amp; Engineering student at the <strong>University of Calcutta</strong>, and
+                    somewhere
+                    around my first HTML page, I got hooked — not just on making things work, but on making them
+                    <em>feel</em> right. That pull between logic and design is basically where I live now.
+                </p>
+                <p class="reveal reveal--delay-1">
+                    Outside of coursework, I spend my time prototyping interfaces in Figma, building small web apps to
+                    test
+                    ideas, and reading way too many CSS tricks threads at 1am. I'm most interested in front-end
+                    engineering
+                    and product design — the parts of the web people actually touch.
+                </p>
+
+                <div class="timeline reveal reveal--delay-2">
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__body">
+                            <span class="timeline__year">2022 — 2026</span>
+                            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+                            <p>University of Calcutta</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__body">
+                            <span class="timeline__year">Ongoing</span>
+                            <h3>Self-taught Front-End &amp; UI/UX</h3>
+                            <p>React, Figma, design systems &amp; accessibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS / WHAT I DO ===== -->
+    <section class="section services" id="skills">
+        <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span>What I do</p>
+            <h2 class="section__title">Where code meets design.</h2>
+        </div>
+
+        <div class="cards reveal">
+            <div class="card card--accent">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M8 4L2 12l6 8M16 4l6 8-6 8" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3>Front-End Development</h3>
+                <p>Building responsive, accessible interfaces with HTML5, CSS3, JavaScript and React.</p>
+            </div>
+            <div class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+                <h3>UI / UX Design</h3>
+                <p>Designing wireframes, prototypes and interfaces in Figma, grounded in real user flows.</p>
+            </div>
+            <div class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3>Problem Solving</h3>
+                <p>Applying CS fundamentals — data structures, databases, clean logic — to real projects.</p>
+            </div>
+        </div>
+
+        <div class="skillset reveal reveal--delay-1">
+            <div class="skillset__group">
+                <h4>Development</h4>
+                <div class="chips">
+                    <span class="chip">HTML5</span>
+                    <span class="chip">CSS3</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">React</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">Git &amp; GitHub</span>
+                </div>
+            </div>
+            <div class="skillset__group">
+                <h4>Design</h4>
+                <div class="chips">
+                    <span class="chip">Figma</span>
+                    <span class="chip">Wireframing</span>
+                    <span class="chip">Prototyping</span>
+                    <span class="chip">Design Systems</span>
+                </div>
+            </div>
+            <div class="skillset__group">
+                <h4>Currently learning</h4>
+                <div class="chips">
+                    <span class="chip chip--muted">Node.js</span>
+                    <span class="chip chip--muted">TypeScript</span>
+                    <span class="chip chip--muted">MongoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects" id="projects">
+        <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span>Selected Work</p>
+            <h2 class="section__title">A few things I've built.</h2>
+        </div>
+
+        <div class="projects__grid">
+            <article class="project reveal">
+                <div class="project__preview project__preview--one">
+                    <div class="mockup-window">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="project__body">
+                    <span class="project__tag">Web App · React</span>
+                    <h3>CU Connect</h3>
+                    <p>A campus community concept where students can find clubs, events and study groups across
+                        departments.</p>
+                    <div class="project__stack">
+                        <span>React</span><span>Node.js</span><span>Figma</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal reveal--delay-1">
+                <div class="project__preview project__preview--two">
+                    <div class="mockup-window">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="project__body">
+                    <span class="project__tag">Design System</span>
+                    <h3>Rangoli UI Kit</h3>
+                    <p>A colourful component library inspired by rangoli patterns, built as reusable Figma components.
+                    </p>
+                    <div class="project__stack">
+                        <span>Figma</span><span>Design Tokens</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal reveal--delay-2">
+                <div class="project__preview project__preview--three">
+                    <div class="mockup-window">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="project__body">
+                    <span class="project__tag">Full-Stack</span>
+                    <h3>Recipe Book</h3>
+                    <p>A recipe-sharing app with search and saved favourites, built to practice full-stack fundamentals.
+                    </p>
+                    <div class="project__stack">
+                        <span>Python</span><span>Flask</span><span>SQLite</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="contact__card reveal">
+            <div class="contact__left">
+                <p class="eyebrow"><span class="eyebrow__dot"></span>Contact</p>
+                <h2 class="section__title">Let's build something together.</h2>
+                <p class="contact__desc">
+                    Open to internships, front-end roles and design collaborations. Drop a message —
+                    I usually reply within a day or two.
+                </p>
+                <a href="mailto:hello@pujasarkar.dev" class="contact__email">hello@pujasarkar.dev</a>
+
+                <div class="socials">
+                    <a href="#" aria-label="GitHub" class="social">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .5C5.7.5.8 5.4.8 11.7c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.3-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.4 0c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.2-2.6 5.2-5.1 5.5.4.3.8 1 .8 2v3c0 .4.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.2 5.4 18.3.5 12 .5z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM.5 8.98h4.96V23H.5V8.98zM8.5 8.98h4.75v1.92h.07c.66-1.25 2.28-2.57 4.7-2.57 5.03 0 5.96 3.31 5.96 7.62V23h-4.96v-6.33c0-1.51-.03-3.46-2.11-3.46-2.11 0-2.43 1.65-2.43 3.35V23H8.5V8.98z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.9 2H22l-7.2 8.2L23.3 22h-6.9l-5.4-7-6.2 7H1.6l7.7-8.8L1 2h7l4.9 6.4L18.9 2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact__right">
+                <div class="info-box">
+                    <span class="info-box__label">Based in</span>
+                    <span class="info-box__value">Kolkata, West Bengal</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-box__label">Studying</span>
+                    <span class="info-box__value">B.Tech CSE, University of Calcutta</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-box__label">Open to</span>
+                    <span class="info-box__value">Internships &amp; freelance projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Puja Sarkar. Built with HTML, CSS &amp; a lot of coffee.</p>
+    </footer>
+
+    <script>
+        // ---- mobile nav toggle ----
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // ---- nav background on scroll ----
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // ---- scroll reveal ----
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => io.observe(el));
+
+        // ---- typing effect in hero editor ----
+        const codeLines = [
+            "const puja = {",
+            "  role: \"Web Developer & Designer\",",
+            "  university: \"University of Calcutta\",",
+            "  branch: \"CSE, 3rd Year\",",
+            "  skills: [\"React\", \"Figma\", \"UX\"],",
+            "  loves: [\"clean UI\", \"chai\", \"good code\"]",
+            "};"
+        ];
+        const target = document.getElementById('typedCode');
+        let lineIdx = 0, charIdx = 0;
+
+        function typeStep() {
+            if (lineIdx < codeLines.length) {
+                const line = codeLines[lineIdx];
+                if (charIdx <= line.length) {
+                    target.textContent = codeLines.slice(0, lineIdx).join('\n') +
+                        (lineIdx > 0 ? '\n' : '') + line.slice(0, charIdx);
+                    charIdx++;
+                    setTimeout(typeStep, 22 + Math.random() * 25);
+                } else {
+                    lineIdx++;
+                    charIdx = 0;
+                    setTimeout(typeStep, 220);
+                }
+            } else {
+                setTimeout(() => {
+                    lineIdx = 0; charIdx = 0; target.textContent = '';
+                    typeStep();
+                }, 2800);
+            }
+        }
+        typeStep();
+    </script>
+</body>
+
+</html>
